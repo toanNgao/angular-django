@@ -1,0 +1,39 @@
+<!-- BANNER -->
+<div class="container banner">
+  <div class="row bg-light">
+    <div class="col-12 text-center" style="margin: auto; padding: 50px;">
+      <h2>LOG IN</h2>
+      <a href="" title="" class="list"><i class="fas fa-home"><span>Home</span></i></a>
+      <i class="fas fa-angle-double-right ml-3 mr-3"></i>
+      <a href="" title="" class="list"><span>log in</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN  -->
+<div class="container main">
+  <div class="row select">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-outline-primary">LOG IN</button>
+    </div>
+    <div class="col-md-6">
+      <button [routerLink]="['/register']" routerLinkActive="router-link-active" type="button"
+              class="btn btn-primary">REGISTER</button>
+    </div>
+  </div>
+  <form [formGroup]="userLoginForm" >
+    <div class="container">
+      <label for="username"><b>Username</b></label>
+      <input formControlName="username" type="text" placeholder="Enter Username" name="username" required>
+
+      <label for="password"><b>Password</b></label>
+      <input formControlName="password" type="password" placeholder="Enter Password" name="password" required>
+
+      <button (click)="login()">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>

@@ -1,0 +1,104 @@
+<div class="main-container no-sidebar">
+    <div class="container">
+        <div class="main-content">
+            <div class="page-title">
+                <h3>CHECKOUT</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="form-checkout" [formGroup]="orderForm">
+                        <h2 class="form-title">SHIPPING ADDRESS</h2>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label><b>First name</b></label>
+                                <p><input formControlName="first_name" type="text" placeholder="First Name"></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Last name</b></label>
+                                <p><input formControlName="last_name" type="text" placeholder="Last Name"></p>
+                            </div>
+                        </div>
+                        <label><b>Shipping address</b></label>
+                        <p><input formControlName="shipping_address" type="text" placeholder="Shipping Address"></p>
+
+                        <label><b>City</b></label>
+                        <p><input formControlName="city" type="text" placeholder="Town / City"></p>
+
+                        <label><b>Phone number</b></label>
+                        <p><input formControlName="phone_number" type="text" placeholder="Phone"></p>
+                    </form>
+                </div>
+              <div class="col-sm-6">
+                <div class="form-checkout order">
+                        <h2 class="form-title">YOUR ORDER</h2>
+                        <table class="shop-table order">
+                            <thead>
+                                <tr>
+                                    <th class="product-name">PRODUCT</th>
+                                    <th class="total">TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="product-name">Oversize Fit Trousers Sneaker</td>
+                                    <td class="total"><span class="price">£85.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="product-name">Oversize Fit Trousers Sneaker</td>
+                                    <td class="total"><span class="price">£85.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="subtotal">Subtotal</td>
+                                    <td class="total"><span class="price">£85.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="subtotal">Subtotal</td>
+                                    <td class="total">Internaltional</td>
+                                </tr>
+                                <tr>
+                                    <td class="subtotal">Coupon Discount</td>
+                                    <td class="total">0%</td>
+                                </tr>
+                                <tr class="order-total">
+                                    <td class="subtotal">ORDER TOTAL</td>
+                                    <td class="total"><span class="price">£170.00</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="button btn-primary medium" (click)="order()">ORDER</button>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-origami28"></i></div>
+                        <div class="content">
+                            <h4 class="title">FREE SHIPPING WORLD WIDE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-curvearrows9"></i></div>
+                        <div class="content">
+                            <h4 class="title">MONEY BACK GUARANTEE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-headphones54"></i></div>
+                        <div class="content">
+                            <h4 class="title">ONLINE SUPPORT 24/7</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

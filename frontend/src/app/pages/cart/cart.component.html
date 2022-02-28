@@ -1,0 +1,105 @@
+<div class="main-container no-sidebar">
+    <div class="container">
+        <div class="main-content">
+            <div class="page-title">
+                <h3>SHOPPING CART</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <table class="shop_table cart">
+                        <thead>
+                            <tr>
+                              <div>
+                                <div>
+                                  <th colspan="2" class="product-name">Product</th>
+                                  <th class="product-price" style="padding-left: 200px">Price</th>
+                                  <th class="product-quantity" style="padding-left: 30px">Qty</th>
+                                  <th class="product-subtotal" style="padding-left: 30px">Total</th>
+                                  <th class="product-remove">&nbsp;</th>
+                                </div>
+                              </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of items">
+                              <div *ngFor="let pro of products">
+                                <div *ngIf="pro.id == item.product">
+                                  <td class="product-thumbnail"><img src="{{pro.thumbnail}}" alt=""></td>
+                                  <td class="product-name"><a href="#">{{pro.name}}</a></td>
+                                  <td *ngIf="pro.sale_price; else elseBlock">{{pro.sale_price}}</td>
+                                  <ng-template #elseBlock><td>{{pro.price}}</td></ng-template>
+                                  <td><input class="qty" type="text" value="+{{item.quantity}}"></td>
+                                  <td>{{item.get_price}}</td>
+                                  <td class="product-remove"><a href="#"><i class="fa fa-close"></i></a></td>
+                                </div>
+                              </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="box-coupon">
+                        <div class="coupon">
+                            <h3 class="coupon-box-title">Coupon</h3>
+                            <div class="inner-box">
+                                <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code">
+                                <input type="submit" class="button" name="apply_coupon" value="Apply Coupon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="box-cart-total">
+                        <h2 class="title">Cart Totals</h2>
+                        <table>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td><span class="price">{{cart.get_items_price}} đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>
+                                    <span>{{cart.transport_fee}} đ</span>
+                                </td>
+                            </tr>
+                            <tr class="order-total">
+                                <td>Toal</td>
+                                <td><span class="price">{{cart.get_total_price}}</span></td>
+                            </tr>
+                        </table>
+                        <button class="button medium">UPDATE CART</button>
+                        <button class="button btn-primary medium checkout-button" [routerLink]="['/checkout']" routerLinkActive="router-link-active">PROCEED TO CHECKOUT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-origami28"></i></div>
+                        <div class="content">
+                            <h4 class="title">FREE SHIPPING WORLD WIDE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-curvearrows9"></i></div>
+                        <div class="content">
+                            <h4 class="title">MONEY BACK GUARANTEE</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="element-icon style2">
+                        <div class="icon"><i class="flaticon flaticon-headphones54"></i></div>
+                        <div class="content">
+                            <h4 class="title">ONLINE SUPPORT 24/7</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

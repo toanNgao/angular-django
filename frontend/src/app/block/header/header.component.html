@@ -1,0 +1,209 @@
+<header id="header" class="header style1">
+    <div class="top-header">
+        <div class="container">
+            <div class="inner">
+                <div class="main-menu-wapper">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <ul class="boutique-nav main-menu clone-main-menu">
+                                <li class="active menu-item-has-children item-megamenu">
+                                    <a [routerLink]="['/home']" routerLinkActive="router-link-active" id="home">Home</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a [routerLink] = "['/about']" routerLinkActive = "router-link-active" id="page">Pages</a>
+                                    <span class="arow"></span>
+                                    <ul class="sub-menu">
+                                        <li><a routerLink = "/about">About Us</a></li>
+                                        <li><a [routerLink]="['/contract']" routerLinkActive="router-link-active">Contact Us</a></li>
+                                        <li><a [routerLink]="['/cart']" routerLinkActive="router-link-active">Cart</a></li>
+                                        <li><a [routerLink]="['/checkout']" routerLinkActive="router-link-active">Checkout</a></li>
+                                        <li><a [routerLink]="['/wishlist']" routerLinkActive="router-link-active">wishlist</a></li>
+                                        <li><a [routerLink]="['/lookbook']" routerLinkActive="router-link-active">Lookbook</a></li>
+                                        <!-- <li><a [routerLink]="['/error']" routerLinkActive="router-link-active">404 page</a></li> -->
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children item-megamenu">
+                                    <a [routerLink]="['/category/1']" routerLinkActive="router-link-active">Shop</a>
+
+                                </li>
+                                <li class="menu-item-has-children item-megamenu">
+                                    <a >FEATURES</a>
+                                    <div style="width:1500px;" class="sub-menu megamenu">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="element-icon">
+                                                    <div class="icon"><img src="../../../assets/icons/icon-custom.png" alt=""></div>
+                                                    <div class="content">
+                                                        <h4 class="title">EASY CUSTOMIZE</h4>
+                                                        <div class="text">
+                                                            <p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="element-icon">
+                                                    <div class="icon"><img src="../../../assets/icons/icon-color.png" alt=""></div>
+                                                    <div class="content">
+                                                        <h4 class="title">UNLIMITED COLOR</h4>
+                                                        <div class="text">
+                                                            <p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="element-icon">
+                                                    <div class="icon"><img src="../../../assets/icons/icon-responsive.png" alt=""></div>
+                                                    <div class="content">
+                                                        <h4 class="title">RESPONSIVE DESIGN</h4>
+                                                        <div class="text">
+                                                            <p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="element-icon">
+                                                    <div class="icon"><img src="../../../assets/icons/icon-document.png" alt=""></div>
+                                                    <div class="content">
+                                                        <h4 class="title">EASY DOCUMENT</h4>
+                                                        <div class="text">
+                                                            <p>Maecenas sit amet lectus vulputate, tristique mi a, lobortis erat. Nunc quis malesuada urna. Ut in blandit diam. Sed diam sem, imperdiet id enim blandit, vehicula blandit libero.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a [routerLink]="['/blogs']" routerLinkActive="router-link-active" id="blog">BLOG</a>
+                                </li>
+                                <li>
+                                    <a [routerLink]="['/login']" routerLinkActive="router-link-active"><i class="fa fa-sign-in"></i></a>
+                                </li>
+                                <li>
+                                    <a (click)="logout()"><i class="fa fa-sign-out"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <span class="mobile-navigation"><i class="fa fa-bars"></i></span>
+                            <div class="box-control">
+                                <form class="box-search">
+                                    <input type="text" class="search" placeholder="Search here...">
+                                    <button class="button-search"><span class="pe-7s-search"></span></button>
+                                </form>
+                                <div class="box-settings">
+                                    <span class="icon pe-7s-config"></span>
+                                    <div class="settings-wrapper">
+                                        <div class="setting-content">
+                                            <div class="select-language">
+                                                <div class="language-title">Select language</div>
+                                                <div class="language-topbar">
+                                                    <div class="lang-list">
+                                                        <ul class="clearfix">
+                                                            <li class="active">
+                                                                <a href="#"> <img src="../../../assets/flag1.png" alt=""> </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"> <img src="../../../assets/flag2.png" alt=""></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"> <img src="../../../assets/flag3.png" alt=""></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"> <img src="../../../assets/flag4.png" alt=""></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="select-currency">
+                                                <div class="currency-title">Select currency</div>
+                                                <div class="currency-topbar">
+                                                    <div class="currency-list">
+                                                        <ul class="clearfix">
+                                                            <li><a href="#"><span class="sym"><i class="fa fa-usd"></i></span></a></li>
+                                                            <li class="active"><a href="#"><span class="sym"><i class="fa fa-eur"></i></span></a></li>
+                                                            <li><a href="#"><span class="sym"><i class="fa fa-gbp"></i></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="setting-option">
+                                                <ul>
+                                                    <li><a href="#"><i class="icon-heart icons"></i><span>Wishlist</span></a></li>
+                                                    <li><a href="#"><i class="icon-user icons"></i><span> MyAccount</span></a></li>
+                                                    <li><a href="#"><i class="icon-note icons"></i><span>Checkout</span></a></li>
+                                                    <li><a href="#"><i class="icon-handbag icons"></i><span>Compare</span></a></li>
+                                                    <li><a href="#"><i class="icon-lock-open icons"></i><span>LoginForm / Register</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-header">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-3">
+                    <div class="logo">
+                        <a href="#"><img src="../../../assets/logos/1.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-9">
+                    <ul class="category-menu">
+                        <li *ngFor="let cat of categories">
+                            <a routerLink="/category/{{cat.id}}">
+                                <img src="{{ cat.thumbnail }}" alt="">{{cat.name}}
+                            </a>
+                        </li>
+
+                        <li class="mini-cart">
+                            <a class="cart-link" href="#">
+                                <img src="../../../assets/categorys/5.png" alt=""> My cart
+                                <span class="count">3</span>
+                            </a>
+                            <div class="show-shopping-cart">
+                                <h3 class="title">YOU HAVE <span class="text-primary">(3 ITEMS)</span> IN YOUR CART</h3>
+                                <ul class="list-product">
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../../../assets/products/1.png" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h4 class="product-name"><a href="#">LONDON STAR SWEATSHIRT</a></h4>
+                                            <span class="price">1x£375.00</span>
+                                            <a class="remove-item" href="#"><i class="fa fa-close"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumb">
+                                            <img src="../../../assets/products/1.png" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h4 class="product-name"><a href="#">LONDON STAR SWEATSHIRT</a></h4>
+                                            <span class="price">1x£375.00</span>
+                                            <a class="remove-item" href="#"><i class="fa fa-close"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="sub-total">
+                                    Subtotal:£255.00
+                                </div>
+                                <div class="group-button">
+                                    <a href="#" class="button">Shopping Cart</a>
+                                    <a href="#" class="check-out button">CheckOut</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
